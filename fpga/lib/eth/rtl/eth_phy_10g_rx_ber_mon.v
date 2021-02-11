@@ -57,7 +57,8 @@ initial begin
     end
 end
 
-parameter COUNT_WIDTH = $clog2(COUNT_125US);
+localparam integer COUNT_125US_INT = COUNT_125US;
+parameter COUNT_WIDTH = $clog2(COUNT_125US_INT);
 
 localparam [1:0]
     SYNC_DATA = 2'b10,
